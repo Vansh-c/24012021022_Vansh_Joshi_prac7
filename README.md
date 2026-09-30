@@ -22,3 +22,51 @@ An Android application developed in Kotlin that demonstrates network API consump
 ---
 
 ## 🏗️ Architecture & Component Overview
+
+
+---
+
+## 🗄️ SQLite Database Schema
+
+| Column Name | Data Type | Constraint | Description |
+|---|---|---|---|
+| `id` | `TEXT` | `PRIMARY KEY` | Unique Contact ID |
+| `name` | `TEXT` | | Full Name |
+| `phone_no` | `TEXT` | | Contact Phone Number |
+| `gmail` | `TEXT` | | Email Address |
+| `address` | `TEXT` | | Residential Address |
+| `latitude` | `REAL` | | Geolocation Latitude |
+| `longitude` | `REAL` | | Geolocation Longitude |
+
+---
+
+## 🚀 How to Run the Project
+
+1. **Clone or Open in Android Studio:**
+   - Open Android Studio and select **Open** ➔ choose the project directory.
+2. **Sync Gradle:**
+   - Allow Android Studio to sync dependencies and build tools.
+3. **Permissions:**
+   - Ensure `<uses-permission android:name="android.permission.INTERNET"/>` is present in `AndroidManifest.xml`.
+4. **Run on Emulator / Device:**
+   - Click **Run (`Shift + F10`)** or press the green Play button.
+
+---
+
+## 📱 How to Use the App
+
+1. **Fetch from API:** Tap **`API Fetch`** to download remote contact data and automatically populate the local SQLite database.
+2. **View Local Contacts:** Tap **`Local Contacts`** to load and display all records currently stored in SQLite.
+3. **Add Contact:** Tap **`Add Contact`**, fill in the fields, and tap **`Save`**.
+4. **Edit Contact:** Tap the **`Edit`** button on any card to modify its details.
+5. **Delete Contact:** Tap the **`🗑️ Delete`** floating action button on any card to delete it permanently from SQLite.
+
+---
+
+## 🛠️ Built With
+- **Language:** [Kotlin](https://kotlinlang.org/)
+- **IDE:** [Android Studio](https://developer.android.com/studio)
+- **Database:** SQLite (`SQLiteOpenHelper`)
+- **Networking:** `HttpsURLConnection` + Kotlin Coroutines
+
+
